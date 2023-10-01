@@ -8,7 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 
-public class ExampleCommand implements TabCompleter, CommandExecutor{
+public class NetworkPacketCommand implements TabCompleter, CommandExecutor{
     @Override
     public List<String> onTabComplete(CommandSender sender, Command cmd, String label, String[] args) {
         List<String> completions = new ArrayList<String>();
