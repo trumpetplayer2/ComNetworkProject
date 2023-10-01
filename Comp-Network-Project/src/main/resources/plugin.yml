@@ -1,0 +1,19 @@
+main: me.trumpetplayer2.CompNetworkProject.Main
+name: CompNetworkProject
+version: 0.0.1
+description: Insert Description
+author: Trumpetplayer2
+api-version: 1.18
+
+commands:
+  networkpacket:
+    description: Example Command
+    usage: /example [subcommand]
+    aliases: [examples, examp]
+    permission: pluginnamehere.example
+    permission-message: You do not have permission to use this command
+
+permissions:
+    compnetworkproject.*:
+        description: Example Plugin Cast
+        default: false
