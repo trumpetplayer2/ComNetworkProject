@@ -7,13 +7,11 @@ api-version: 1.18
 
 commands:
   networkpacket:
-    description: Example Command
-    usage: /example [subcommand]
-    aliases: [examples, examp]
-    permission: pluginnamehere.example
-    permission-message: You do not have permission to use this command
+    description: Toggles network packet display
+    usage: /networkpacket [true/false]
+    aliases: [np, netpack, cnp]
 
 permissions:
     compnetworkproject.*:
-        description: Example Plugin Cast
+        description: Permissions. Not going to be used for this project
         default: false
