@@ -17,6 +17,7 @@ import com.comphenix.protocol.events.PacketContainer;
 import com.comphenix.protocol.events.PacketEvent;
 
 import me.trumpetplayer2.CompNetworkProject.Commands.NetworkPacketCommand;
+import me.trumpetplayer2.CompNetworkProject.Crafting.CraftingManager;
 import me.trumpetplayer2.CompNetworkProject.Listeners.*;
 
 public class Main extends JavaPlugin{
@@ -46,6 +47,9 @@ public class Main extends JavaPlugin{
         //Register ProtocolManager
         protocolManager = ProtocolLibrary.getProtocolManager();
         enablePacketListeners();
+        CraftingManager crafting = new CraftingManager ();
+        crafting.registerRecipes();
+        
     }
     //Default Disable. This is ran if Server stopped,
     //Plugin failed to load, or reload occurs
