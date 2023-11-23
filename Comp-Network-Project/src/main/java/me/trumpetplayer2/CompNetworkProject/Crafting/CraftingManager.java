@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import me.trumpetplayer2.CompNetworkProject.Main;
@@ -22,7 +24,17 @@ public class CraftingManager {
 		axeMeta.setLore(Lore);
 		doubleBladedAxe.setItemMeta(axeMeta);
 		
-		Main plugin = Main.getInstance(); // Use plugin for "this"
+		Main plugin = Main.getInstance(); // Use plugin in place of "this"
 		
+		NamespacedKey key = new NamespacedKey(plugin, "double bladed netherite axe");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, doubleBladedAxe);
+		
+		recipe.shape("NSN", "NSN", " S ");
+		
+		recipe.setIngredient('S', Material.STICK);
+		recipe.setIngredient('N', Material.NETHERITE_INGOT);
+		
+		return recipe; // Do I even need a return statement with how the rest of the code is set up
 	}
 }
