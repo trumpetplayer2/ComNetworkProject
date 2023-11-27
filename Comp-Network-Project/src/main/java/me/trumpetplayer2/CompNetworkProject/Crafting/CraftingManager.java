@@ -2,6 +2,7 @@ package me.trumpetplayer2.CompNetworkProject.Crafting;
 
 import java.util.ArrayList;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -26,7 +27,7 @@ public class CraftingManager {
 		
 		Main plugin = Main.getInstance(); // Use plugin in place of "this"
 		
-		NamespacedKey key = new NamespacedKey(plugin, "double bladed netherite axe");
+		NamespacedKey key = new NamespacedKey(plugin, "DBNethAxe");
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, doubleBladedAxe);
 		
@@ -35,6 +36,5 @@ public class CraftingManager {
 		recipe.setIngredient('S', Material.STICK);
 		recipe.setIngredient('N', Material.NETHERITE_INGOT);
 		
-		return recipe; // Do I even need a return statement with how the rest of the code is set up
-	}
+		Bukkit.addRecipe(recipe);	}
 }
