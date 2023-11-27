@@ -27,7 +27,7 @@ public class CraftingManager {
 		
 		Main plugin = Main.getInstance(); // Use plugin in place of "this"
 		
-		NamespacedKey key = new NamespacedKey(plugin, "DBNethAxe");
+		NamespacedKey key = new NamespacedKey(plugin, "DoubleBladedNetheriteAxe");
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, doubleBladedAxe);
 		
@@ -36,5 +36,6 @@ public class CraftingManager {
 		recipe.setIngredient('S', Material.STICK);
 		recipe.setIngredient('N', Material.NETHERITE_INGOT);
 		
-		Bukkit.addRecipe(recipe);	}
+		Bukkit.addRecipe(recipe);
+	}
 }
