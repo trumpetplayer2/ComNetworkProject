@@ -17,10 +17,10 @@ public class CraftingManager {
 		ItemStack doubleBladedAxe = new ItemStack(Material.NETHERITE_AXE);
 		ItemMeta axeMeta = doubleBladedAxe.getItemMeta();
 		
-		axeMeta.setDisplayName(ChatColor.DARK_PURPLE + "Double Bladed Netherite Axe");
+		axeMeta.setDisplayName(ChatColor.LIGHT_PURPLE + "Double Bladed Netherite Axe");
 		
 		ArrayList<String> Lore = new ArrayList<String>();
-		Lore.add("Add Lore");
+		Lore.add(ChatColor.WHITE + "Damage: +80"); 
 		
 		axeMeta.setLore(Lore);
 		doubleBladedAxe.setItemMeta(axeMeta);
